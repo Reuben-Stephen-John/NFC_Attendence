@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import Http404
 from rest_framework.response import Response
 from .models import *
 from .serializers import *
@@ -53,4 +54,14 @@ class AttendanceAPIView(generics.ListCreateAPIView):
     permission_classes = [IsAdminUser]
     serializer_class = AttendanceSerializer
     def get_queryset(self):
-        return Attendance.objects.all()
+        # Get the meeting_id parameter from the request
+        meeting_id = self.request.query_params.get('meeting_id')
+        
+        # Check if the meeting_id parameter is provided
+        if meeting_id is None:
+            raise Http404("meeting_id parameter is required.")
+        
+        # Filter Attendance objects by meeting_id and status='present'
+        queryset = Attendance.objects.filter(meeting_id=meeting_id, status='present')
+        
+        return queryset
