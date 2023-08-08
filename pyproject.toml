@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "nfc-attendence"
+version = "0.1.0"
+description = ""
+authors = ["Reuben-Stephen-John <reuben.sj2003@gmail.com>"]
+readme = ""
+packages = [{include = "nfc_attendence"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Django = "^4.2.1"
+django-rest-framework = "^0.1.0"
+django-cors-headers = "^4.0.0"
+django-import-export = "^3.2.0"
+djangorestframework-simplejwt = "^5.2.2"
+gunicorn = "^21.2.0"
+dj-database-url = "^2.0.0"
+django-environ = "^0.10.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
