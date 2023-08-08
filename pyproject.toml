@@ -3,7 +3,7 @@ name = "nfc-attendence"
 version = "0.1.0"
 description = ""
 authors = ["Reuben-Stephen-John <reuben.sj2003@gmail.com>"]
-readme = "README.md"
+readme = ""
 packages = [{include = "nfc_attendence"}]
 
 [tool.poetry.dependencies]
