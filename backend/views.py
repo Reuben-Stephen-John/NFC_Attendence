@@ -87,7 +87,6 @@ def register():
     data = request.get_json()
     username = data.get('username')
     password = data.get('password')
-    email = data.get('email')
 
     # Check if the username is already taken
     existing_user = User.query.filter_by(username=username).first()
