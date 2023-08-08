@@ -1,22 +1,19 @@
 [tool.poetry]
-name = "backend"
+name = "nfc-attendence"
 version = "0.1.0"
 description = ""
 authors = ["Reuben-Stephen-John <reuben.sj2003@gmail.com>"]
 readme = "README.md"
+packages = [{include = "nfc_attendence"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-flask = "^2.3.2"
-flask-sqlalchemy = "^3.0.5"
-flask-migrate = "^4.0.4"
-sqlalchemy-utils = "^0.41.1"
-flask-admin = "^1.6.1"
-flask-login = "^0.6.2"
-flask-marshmallow = "^0.15.0"
-marshmallow-sqlalchemy = "^0.29.0"
-flask-jwt-extended = "^4.5.2"
-flask-cors = "^3.0.10"
+Django = "^4.2.1"
+django-rest-framework = "^0.1.0"
+django-cors-headers = "^4.0.0"
+django-import-export = "^3.2.0"
+
+[tool.poetry.dev-dependencies]
 
 [build-system]
 requires = ["poetry-core"]
